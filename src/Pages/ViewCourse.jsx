@@ -13,6 +13,7 @@ const ViewCourse = () => {
     const {token} = useSelector((state) => state.auth);
     const dispatch = useDispatch();
 
+    
     useEffect(() => {
         const setCourseSpecificDetails = async() => {
             const courseData = await getFullDetailsOfCourse(courseId, token);
@@ -30,6 +31,7 @@ const ViewCourse = () => {
         }
 
         setCourseSpecificDetails();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
 

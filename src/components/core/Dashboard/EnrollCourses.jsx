@@ -42,6 +42,7 @@ export default function EnrollCourses() {
     } else {
       getEnrolledCourses();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.search]);
 
   return (

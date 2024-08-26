@@ -1,4 +1,3 @@
-import { DiVim } from "react-icons/di";
 import RenderSteps from "../AddCourse/RenderSteps";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -27,6 +26,7 @@ export default function EditCourse(){
         }
 
         populateCourseDetails();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     if(loading){

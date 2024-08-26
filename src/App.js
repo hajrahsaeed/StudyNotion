@@ -27,24 +27,10 @@ import EditCourse from "./components/core/Dashboard/EditCourse/index"
 import CourseDetails from "./Pages/CourseDetails";
 import ViewCourse from "./Pages/ViewCourse";
 import VideoDetails from "./components/core/ViewCourse/VideoDetails"
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
 import Instructor from "./components/core/Dashboard/Instructor"
-import { getUserDetails } from "./services/operations/profileAPI";
 
 function App() {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
   const {user} = useSelector((state) => state.profile)
-
-  // useEffect(() => {
-  //   if (localStorage.getItem("token")) {
-  //     const token = JSON.parse(localStorage.getItem("token"))
-  //     dispatch(getUserDetails(token, navigate))
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
 
   return (
     <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">

@@ -6,13 +6,10 @@ import { categories } from '../services/apis';
 import { getCatalogPageData } from '../services/operations/pageAndComponentsData';
 import CourseCard from '../components/core/Catalog/CourseCard';
 import CourseSlider from '../components/core/Catalog/CourseSlider';
-import { useSelector } from 'react-redux';
-import Error from './Error';
 
 
 const Catalog = () => {
 
-    const { loading } = useSelector((state) => state.profile)
     const [active, setActive] = useState(1)
     const {catalogName} = useParams();
     const [catalogPageData, setCatalogPageData] = useState(null);

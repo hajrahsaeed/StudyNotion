@@ -19,6 +19,7 @@ const CourseDetailsCard = ({ course, setConfirmationModal, handleBuyCourse }) =>
     const {
         thumbnail: ThumbnailImage,
         price: CurrentPrice,
+        
         _id:course_id,
     } = course
 

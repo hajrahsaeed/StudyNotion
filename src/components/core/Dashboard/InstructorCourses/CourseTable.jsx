@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Table, Tr, Td, Tbody, Thead, Th } from 'react-super-responsive-table';
 import { COURSE_STATUS } from '../../../../utils/constants';
 import { useNavigate } from 'react-router-dom';
 import ConfirmationModel from '../../../common/ConfirmationModel';
 import { deleteCourse, fetchInstructorCourses } from '../../../../services/operations/courseDetails';
-import { setCourse } from '../../../../slices/courseSlice';
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 import { HiClock } from 'react-icons/hi';
 import { FaCheck } from 'react-icons/fa';
@@ -16,7 +15,6 @@ import { formatDate } from "../../../../services/formatDate"
 
 export default function CourseTable({courses, setCourses}){
 
-    const dispatch = useDispatch();
     const navigate = useNavigate();
     const {token} = useSelector((state) => state.auth);
     const [loading, setLoading] = useState(false);

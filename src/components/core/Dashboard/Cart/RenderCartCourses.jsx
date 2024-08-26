@@ -22,7 +22,7 @@ const RenderCartCourses = () => {
                       } ${indx !== 0 && "mt-6"} `}
                     >
                         <div className="flex flex-1 flex-col gap-4 xl:flex-row">
-                            <img src={course?.thumbnail} 
+                            <img src={course?.thumbnail}  alt='thumbnail'
                               className="h-[148px] w-[220px] rounded-lg object-cover"/>
                             <div >
                                 <p className="flex flex-col space-y-1">{course?.courseName}</p>

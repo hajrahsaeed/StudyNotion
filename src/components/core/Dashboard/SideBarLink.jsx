@@ -1,14 +1,12 @@
 import React from 'react'
 import * as VscIcons from "react-icons/vsc"
 import * as AiIcons from "react-icons/ai"
-import { useDispatch } from 'react-redux';
 import { matchPath, NavLink, useLocation } from 'react-router-dom';
 
 const SideBarLink = ({link, iconName}) => {
 
     const Icon = VscIcons[iconName] || AiIcons[iconName];;
     const location = useLocation();
-    const dispatch = useDispatch();
 
     const matchRoute = (route) =>  {
         return matchPath({path:route},location.pathname);

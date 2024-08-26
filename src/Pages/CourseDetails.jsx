@@ -55,7 +55,7 @@ const CourseDetails = () => {
         const count = GetAvgRating(response?.data?.courseDetails.ratingAndReviews)
         setAvgReviewCount(count);
     }, [response])
-    console.log("avgReviewCount: ", avgReviewCount)
+    //console.log("avgReviewCount: ", avgReviewCount)
 
     // collapsing
     const handleActive = (id) => {
@@ -63,7 +63,7 @@ const CourseDetails = () => {
         setIsActive(
             !isActive.includes(id)
             ? isActive.concat([id])
-            : isActive.filter((e) => e != id)
+            : isActive.filter((e) => e !== id)
         )
     }
 
